@@ -10,10 +10,13 @@ namespace TestManagmentSystem.Web.Controllers
 {
     public class HomeController : BaseController
     {
+        // Poor man's DI
+        /*
         public HomeController()
             :this(new TestManagmentSystemData(new TestManagmentSystemDbContext()))
         {
         }
+        */
 
         public HomeController(ITestManagmentSystemData data)
             :base(data)
