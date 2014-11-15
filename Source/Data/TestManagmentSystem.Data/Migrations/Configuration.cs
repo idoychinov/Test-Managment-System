@@ -4,6 +4,7 @@ namespace TestManagmentSystem.Data.Migrations
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using TestManagmentSystem.Data.Models;
 
     internal sealed class Configuration : DbMigrationsConfiguration<TestManagmentSystemDbContext>
     {
@@ -23,10 +24,13 @@ namespace TestManagmentSystem.Data.Migrations
             this.SeadTestedSystems(context);
         }
  
-        private void SeadTestedSystems( TestManagmentSystemDbContext context)
+        private void SeadTestedSystems(TestManagmentSystemDbContext context)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+            context.TestedSystems.AddOrUpdate(a => a.Id,
+                new TestedSystem
+                {
+                    Name = "This System"
+                });
         }
     }
 }
