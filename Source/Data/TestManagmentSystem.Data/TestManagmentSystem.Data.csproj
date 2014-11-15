@@ -52,10 +52,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationDbContext.cs" />
+    <Compile Include="ITestManagmentSystemData.cs" />
+    <Compile Include="ITestManagmentSystemDbContext.cs" />
+    <Compile Include="Repositories\Base\DeletableEntityRepository.cs" />
+    <Compile Include="Repositories\Base\GenericRepository.cs" />
+    <Compile Include="TestManagmentSystemData.cs" />
+    <Compile Include="TestManagmentSystemDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Common\TestManagmentSystem.Common\TestManagmentSystem.Common.csproj">
+      <Project>{87f36c37-3242-4473-ac63-282318313b1f}</Project>
+      <Name>TestManagmentSystem.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestManagmentSystem.Data.Common\TestManagmentSystem.Data.Common.csproj">
+      <Project>{234FDE1C-4EE4-42CE-B250-30DD02697946}</Project>
+      <Name>TestManagmentSystem.Data.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TestManagmentSystem.Data.Models\TestManagmentSystem.Data.Models.csproj">
       <Project>{FE8AE169-ACAA-40FF-B91A-9E5B577BA0E4}</Project>
       <Name>TestManagmentSystem.Data.Models</Name>
@@ -65,6 +78,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
