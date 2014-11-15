@@ -54,7 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationUser.cs" />
-    <Compile Include="Envoriment.cs" />
+    <Compile Include="Environment.cs" />
     <Compile Include="Project.cs" />
     <Compile Include="TestedSystem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -62,6 +62,12 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TestManagmentSystem.Data.Common\TestManagmentSystem.Data.Common.csproj">
+      <Project>{234FDE1C-4EE4-42CE-B250-30DD02697946}</Project>
+      <Name>TestManagmentSystem.Data.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

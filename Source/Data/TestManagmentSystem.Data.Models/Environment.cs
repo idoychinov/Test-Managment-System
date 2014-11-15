@@ -2,8 +2,7 @@
 {
     using TestManagmentSystem.Data.Common.Base;
 
-    public class Project : DeletableEntity
+    public class Environment : DeletableEntity
     {
-        
     }
 }

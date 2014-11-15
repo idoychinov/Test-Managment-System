@@ -1,6 +1,9 @@
 ﻿namespace TestManagmentSystem.Data.Models
 {
-    public class TestedSystem
+    using TestManagmentSystem.Data.Common.Base;
+
+
+    public class TestedSystem : DeletableEntity
     {
     }
 }

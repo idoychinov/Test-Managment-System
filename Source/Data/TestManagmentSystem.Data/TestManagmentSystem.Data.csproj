@@ -42,6 +42,7 @@
     <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
       <HintPath>..\..\packages\Microsoft.AspNet.Identity.EntityFramework.2.1.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -52,13 +53,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ITestManagmentSystemData.cs" />
+    <Compile Include="UnitOfWork\Base\ITestManagmentSystemBaseData.cs" />
     <Compile Include="ITestManagmentSystemDbContext.cs" />
     <Compile Include="Repositories\Base\DeletableEntityRepository.cs" />
     <Compile Include="Repositories\Base\GenericRepository.cs" />
-    <Compile Include="TestManagmentSystemData.cs" />
+    <Compile Include="UnitOfWork\Base\TestManagmentSystemBaseData.cs" />
     <Compile Include="TestManagmentSystemDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitOfWork\ITestManagmentSystemData.cs" />
+    <Compile Include="UnitOfWork\TestManagmentSystemData.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Common\TestManagmentSystem.Common\TestManagmentSystem.Common.csproj">
