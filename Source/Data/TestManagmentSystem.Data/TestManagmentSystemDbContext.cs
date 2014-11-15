@@ -13,7 +13,7 @@ namespace TestManagmentSystem.Data
     public class TestManagmentSystemDbContext : IdentityDbContext<ApplicationUser>, ITestManagmentSystemDbContext
     {
         public TestManagmentSystemDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : this("DefaultConnection")
         {
         }
 

@@ -4,7 +4,7 @@
     using TestManagmentSystem.Data.Models;
     using TestManagmentSystem.Data.UnitOfWork.Base;
 
-    class TestManagmentSystemData : TestManagmentSystemBaseData
+    public class TestManagmentSystemData : TestManagmentSystemBaseData, ITestManagmentSystemData
     {
         public TestManagmentSystemData(ITestManagmentSystemDbContext context)
             :base(context)

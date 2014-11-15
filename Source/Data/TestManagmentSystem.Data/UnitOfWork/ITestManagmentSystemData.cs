@@ -5,7 +5,7 @@
     using TestManagmentSystem.Data.Models;
     using TestManagmentSystem.Data.UnitOfWork.Base;
 
-    interface ITestManagmentSystemData : ITestManagmentSystemBaseData
+    public interface ITestManagmentSystemData : ITestManagmentSystemBaseData
     {
         IDeletableEntityRepository<TestedSystem> TestedSystems { get; }
 

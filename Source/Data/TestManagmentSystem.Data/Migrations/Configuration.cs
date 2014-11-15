@@ -11,6 +11,8 @@ namespace TestManagmentSystem.Data.Migrations
         public Configuration()
         {            
             AutomaticMigrationsEnabled = true;
+            
+            // TODO: Remove in production
             AutomaticMigrationDataLossAllowed = true;
         }
 

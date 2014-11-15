@@ -159,6 +159,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -231,6 +232,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -240,6 +242,14 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Common\TestManagmentSystem.Common\TestManagmentSystem.Common.csproj">
+      <Project>{87f36c37-3242-4473-ac63-282318313b1f}</Project>
+      <Name>TestManagmentSystem.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\TestManagmentSystem.Data.Common\TestManagmentSystem.Data.Common.csproj">
+      <Project>{234fde1c-4ee4-42ce-b250-30dd02697946}</Project>
+      <Name>TestManagmentSystem.Data.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Data\TestManagmentSystem.Data.Models\TestManagmentSystem.Data.Models.csproj">
       <Project>{FE8AE169-ACAA-40FF-B91A-9E5B577BA0E4}</Project>
       <Name>TestManagmentSystem.Data.Models</Name>
@@ -248,6 +258,9 @@
       <Project>{426067A2-3DDD-4F2E-8E8B-EF01F51D6588}</Project>
       <Name>TestManagmentSystem.Data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
