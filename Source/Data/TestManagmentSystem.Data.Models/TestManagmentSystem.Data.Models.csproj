@@ -54,7 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationUser.cs" />
-    <Compile Include="Environment.cs" />
+    <Compile Include="SystemEnvironment.cs" />
     <Compile Include="Project.cs" />
     <Compile Include="TestedSystem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -31,7 +31,7 @@ namespace TestManagmentSystem.Data
 
         public virtual IDbSet<TestedSystem> TestedSystems { get; set; }
 
-        public virtual IDbSet<Environment> Environments { get; set; }
+        public virtual IDbSet<SystemEnvironment> SystemEnvironments { get; set; }
 
         public virtual IDbSet<Project> Projects { get; set; }
 
@@ -50,7 +50,7 @@ namespace TestManagmentSystem.Data
             return base.SaveChanges();
         }
 
-        public IDbSet<T> Set<T>() where T : class
+        public new IDbSet<T> Set<T>() where T : class
         {
            return base.Set<T>();
         }

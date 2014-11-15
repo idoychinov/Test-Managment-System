@@ -9,7 +9,7 @@
     {
         IDeletableEntityRepository<TestedSystem> TestedSystems { get; }
 
-        IDeletableEntityRepository<Environment> Environments { get; }
+        IDeletableEntityRepository<SystemEnvironment> Environments { get; }
 
         IDeletableEntityRepository<Project> Projects { get; }
 

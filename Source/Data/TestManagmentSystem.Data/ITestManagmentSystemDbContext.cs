@@ -12,7 +12,7 @@
 
         IDbSet<TestedSystem> TestedSystems { get; set; }
 
-        IDbSet<Environment> Environments { get; set; }
+        IDbSet<SystemEnvironment> SystemEnvironments { get; set; }
 
         IDbSet<Project> Projects { get; set; }
 

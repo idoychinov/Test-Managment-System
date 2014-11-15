@@ -21,9 +21,9 @@
             get { return this.GetDeletableEntityRepository<TestedSystem>(); }
         }
 
-        public IDeletableEntityRepository<Environment> Environments
+        public IDeletableEntityRepository<SystemEnvironment> Environments
         {
-            get { return this.GetDeletableEntityRepository<Environment>(); }
+            get { return this.GetDeletableEntityRepository<SystemEnvironment>(); }
         }
 
 

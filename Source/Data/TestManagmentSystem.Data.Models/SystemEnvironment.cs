@@ -3,7 +3,7 @@
     using System.ComponentModel.DataAnnotations;
     using TestManagmentSystem.Data.Common.Base;
 
-    public class TestedSystem : DeletableEntity
+    public class SystemEnvironment : DeletableEntity
     {
         [Key]
         public int Id { get; set; }
