@@ -10,6 +10,11 @@
     {
         IDbSet<ApplicationUser> Users { get; set; }
 
+        IDbSet<TestedSystem> TestedSystems { get; set; }
+
+        IDbSet<Environment> Environments { get; set; }
+
+        IDbSet<Project> Projects { get; set; }
 
         DbContext DbContext { get; }
 

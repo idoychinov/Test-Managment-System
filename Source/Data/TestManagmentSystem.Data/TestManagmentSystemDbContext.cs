@@ -5,6 +5,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 
 using TestManagmentSystem.Data.Common.CodeFirstConvention;
 using TestManagmentSystem.Data.Common.Contracts;
+using TestManagmentSystem.Data.Migrations;
 using TestManagmentSystem.Data.Models;
 
 namespace TestManagmentSystem.Data
@@ -19,6 +20,7 @@ namespace TestManagmentSystem.Data
         public TestManagmentSystemDbContext(string nameOrConnectionString)
             : base(nameOrConnectionString)
         {
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<TestManagmentSystemDbContext, Configuration>());
 
         }
 
@@ -26,6 +28,12 @@ namespace TestManagmentSystem.Data
         {
             return new TestManagmentSystemDbContext();
         }
+
+        public virtual IDbSet<TestedSystem> TestedSystems { get; set; }
+
+        public virtual IDbSet<Environment> Environments { get; set; }
+
+        public virtual IDbSet<Project> Projects { get; set; }
 
         public DbContext DbContext
         {
