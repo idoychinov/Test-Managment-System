@@ -1,13 +1,20 @@
 ﻿namespace TestManagmentSystem.Data.Models
 {
     using System;
+    using System.Collections.Generic;
     using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
-
     using TestManagmentSystem.Data.Common.Base;
 
     public class Project : DeletableEntity
     {
+        private ICollection<Issue> issues;
+
+        public Project()
+        {
+            this.issues = new HashSet<Issue>();
+        }
+
         [Key]
         public int Id { get; set; }
 
@@ -30,5 +37,11 @@
         public int TestedSystemId { get; set; }
 
         public virtual TestedSystem TestedSystem { get; set; }
+
+        public virtual ICollection<Issue> Issues 
+        {
+            get { return this.issues; }
+            set { this.issues= value; }
+        }
     }
 }

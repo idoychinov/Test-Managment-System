@@ -26,10 +26,39 @@
             get { return this.GetDeletableEntityRepository<SystemEnvironment>(); }
         }
 
-
         public IDeletableEntityRepository<Project> Projects
         {
             get { return this.GetDeletableEntityRepository<Project>(); }
+        }
+        
+        public IDeletableEntityRepository<File> Files 
+        {
+            get { return this.GetDeletableEntityRepository<File>(); }
+        }
+
+        public IDeletableEntityRepository<Issue> Issues 
+        {
+            get { return this.GetDeletableEntityRepository<Issue>(); }
+        }
+
+        public IDeletableEntityRepository<TestCase> TestCases 
+        {
+            get { return this.GetDeletableEntityRepository<TestCase>(); }
+        }
+
+        public IDeletableEntityRepository<TestScenario> TestScenarios 
+        {
+            get { return this.GetDeletableEntityRepository<TestScenario>(); }
+        }
+
+        public IDeletableEntityRepository<TestCaseStep> TestCaseStep 
+        {
+            get { return this.GetDeletableEntityRepository<TestCaseStep>(); }
+        }
+
+        public IDeletableEntityRepository<TestResult> TestResults 
+        {
+            get { return this.GetDeletableEntityRepository<TestResult>(); }
         }
     }
 }

@@ -53,8 +53,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="File.cs" />
     <Compile Include="Issue.cs" />
     <Compile Include="IssueStatusType.cs" />
+    <Compile Include="IssuePriorityType.cs" />
+    <Compile Include="TestCaseStep.cs" />
+    <Compile Include="TestResult.cs" />
+    <Compile Include="TestScenarioType.cs" />
+    <Compile Include="TestResultStatusType.cs" />
     <Compile Include="User.cs" />
     <Compile Include="EnvironmentType.cs" />
     <Compile Include="ProjectStatusType.cs" />

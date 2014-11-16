@@ -35,6 +35,19 @@ namespace TestManagmentSystem.Data
 
         public virtual IDbSet<Project> Projects { get; set; }
 
+        public virtual IDbSet<File> Files { get; set; }
+
+        public virtual IDbSet<Issue> Issues { get; set; }
+
+        public virtual IDbSet<TestCase> TestCases { get; set; }
+
+        public virtual IDbSet<TestScenario> TestScenarios { get; set; }
+
+        public virtual IDbSet<TestCaseStep> TestCaseSteps { get; set; }
+
+        public virtual IDbSet<TestResult> TestResults { get; set; }
+
+
         public DbContext DbContext
         {
             get

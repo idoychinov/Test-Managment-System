@@ -16,6 +16,18 @@
 
         IDbSet<Project> Projects { get; set; }
 
+        IDbSet<File> Files { get; set; }
+
+        IDbSet<Issue> Issues { get; set; }
+
+        IDbSet<TestCase> TestCases { get; set; }
+
+        IDbSet<TestScenario> TestScenarios { get; set; }
+
+        IDbSet<TestCaseStep> TestCaseSteps { get; set; }
+
+        IDbSet<TestResult> TestResults { get; set; }
+
         DbContext DbContext { get; }
 
         int SaveChanges();
