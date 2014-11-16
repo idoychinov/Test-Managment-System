@@ -5,27 +5,22 @@ using System.Web;
 using System.Web.Mvc;
 using TestManagmentSystem.Data;
 using TestManagmentSystem.Data.UnitOfWork;
+using TestManagmentSystem.Web.Infrastructure.Services.Contracts;
 
 namespace TestManagmentSystem.Web.Controllers
 {
     public class HomeController : BaseController
     {
-        // Poor man's DI
-        /*
-        public HomeController()
-            :this(new TestManagmentSystemData(new TestManagmentSystemDbContext()))
-        {
-        }
-        */
+        private IHomeServices homeServices;
 
-        public HomeController(ITestManagmentSystemData data)
+        public HomeController(ITestManagmentSystemData data, IHomeServices services)
             :base(data)
         {
+            this.homeServices = services;
         }
 
         public ActionResult Index()
         {
-            ViewBag.TestedSystems = this.Data.TestedSystems.All().FirstOrDefault();
             return View();
         }
 
@@ -40,6 +35,13 @@ namespace TestManagmentSystem.Web.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        [ChildActionOnly]
+        [OutputCache(Duration = 60 * 60)]
+        public ActionResult TestedSystems()
+        {
+            return PartialView("_TestedSystemsPartial", this.homeServices.GetIndexViewModel(5));
         }
     }
 }

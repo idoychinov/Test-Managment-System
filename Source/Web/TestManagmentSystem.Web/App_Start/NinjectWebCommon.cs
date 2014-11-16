@@ -13,6 +13,8 @@ namespace TestManagmentSystem.Web.App_Start
     using TestManagmentSystem.Data;
     using TestManagmentSystem.Data.UnitOfWork;
     using TestManagmentSystem.Web.Infrastructure;
+    using TestManagmentSystem.Web.Infrastructure.Services;
+    using TestManagmentSystem.Web.Infrastructure.Services.Contracts;
 
     public static class NinjectWebCommon 
     {
@@ -68,6 +70,7 @@ namespace TestManagmentSystem.Web.App_Start
             kernel.Bind<ITestManagmentSystemData>().To<TestManagmentSystemData>();
             kernel.Bind<ISanitizer>().To<HtmlSanitizerAdapter>();
 
+            kernel.Bind<IHomeServices>().To<HomeServices>();
         }        
     }
 }
