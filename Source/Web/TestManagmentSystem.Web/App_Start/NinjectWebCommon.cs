@@ -66,7 +66,6 @@ namespace TestManagmentSystem.Web.App_Start
         {
             kernel.Bind<ITestManagmentSystemDbContext>().To<TestManagmentSystemDbContext>();
             kernel.Bind<ITestManagmentSystemData>().To<TestManagmentSystemData>();
-
             kernel.Bind<ISanitizer>().To<HtmlSanitizerAdapter>();
 
         }        
