@@ -6,7 +6,7 @@
     using System.Web.Optimization;
     using System.Web.Routing;
 
-    //using TestManagmentSystem.Web.Infrastructure.Mapping;
+    using TestManagmentSystem.Web.Infrastructure.Mapping;
 
     public class MvcApplication : System.Web.HttpApplication
     {
@@ -20,8 +20,8 @@
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            //var autoMapperConfig = new AutoMapperConfig(Assembly.GetExecutingAssembly());
-           // autoMapperConfig.Execute();
+            var autoMapperConfig = new AutoMapperConfig(Assembly.GetExecutingAssembly());
+            autoMapperConfig.Execute();
         }
     }
 }
