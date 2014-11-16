@@ -7,10 +7,13 @@
     public class TestedSystem : DeletableEntity
     {
         private ICollection<SystemEnvironment> environments;
+        private ICollection<Project> projects;
+
 
         public TestedSystem()
         {
             this.environments = new HashSet<SystemEnvironment>();
+            this.projects = new HashSet<Project>();
         }
 
         [Key]
@@ -27,6 +30,12 @@
         {
             get { return this.environments; }
             set { this.environments = value; }
+        }
+
+        public virtual ICollection<Project> Projects
+        {
+            get { return this.projects; }
+            set { this.projects = value; }
         }
 
     }

@@ -25,5 +25,8 @@
         [DefaultValue(ProjectStatusType.Planing)]
         public ProjectStatusType Status { get; set; }
 
+        public int TestedSystemId { get; set; }
+
+        public virtual TestedSystem TestedSystem { get; set; }
     }
 }

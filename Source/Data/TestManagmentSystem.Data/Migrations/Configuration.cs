@@ -21,12 +21,14 @@ namespace TestManagmentSystem.Data.Migrations
 
             // TODO: Remove in production
             AutomaticMigrationDataLossAllowed = true;
+            this.random = new RandomGenerator();
         }
 
         protected override void Seed(TestManagmentSystemDbContext context)
         {
             this.userManager = new UserManager<User>(new UserStore<User>(context));
             this.SeedRoles(context);
+            this.SeedUsers(context);
             this.SeadTestedSystems(context);
         }
 
@@ -45,12 +47,13 @@ namespace TestManagmentSystem.Data.Migrations
                 return;
             }
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 1; i <= 5; i++)
             {
+                var username = "user" + i + "@tms.com";
                 var user = new User
                     {
-                        Email = string.Format("{0}@{1}.com", this.random.RandomString(6, 16), this.random.RandomString(6, 16)),
-                        UserName = this.random.RandomString(6, 16)
+                        Email = username,
+                        UserName = username
                     };
 
                 this.userManager.Create(user, "123456");
@@ -58,19 +61,23 @@ namespace TestManagmentSystem.Data.Migrations
 
             var adminUser = new User
             {
-                Email = "admin@mysite.com",
-                UserName = "Administrator"
+                Email = "admin@tms.com",
+                UserName = "admin@tms.com"
             };
 
-            this.userManager.Create(adminUser, "admin123456");
+            this.userManager.Create(adminUser, "admin123");
 
             this.userManager.AddToRole(adminUser.Id, GlobalConstants.AdminRole);
+            context.SaveChanges();
         }
 
 
         private void SeadTestedSystems(TestManagmentSystemDbContext context)
         {
             GeneratedTestedSystem(context, "Test Management System", "The product allows management of system and integration and UAT tests results");
+            GeneratedTestedSystem(context, "Pew Pew", "Very addictive online game. The title says it all");
+            GeneratedTestedSystem(context, "Our Intra-net", "The Company's intra-net site");
+
             context.SaveChanges();
         }
 
@@ -94,10 +101,25 @@ namespace TestManagmentSystem.Data.Migrations
  
         private void SeadProjects(TestedSystem testedSystem)
         {
-            
+            var projectsCount = random.RandomNumber(0,5);
+            for(var i=0; i< projectsCount; i++)
+            {
+                var startDate = new DateTime(random.RandomNumber(2010, 2015),random.RandomNumber(1,12), random.RandomNumber(1,28));
+                var endDate = startDate.AddDays(random.RandomNumber( 60,600));
+                var project = new Project()
+                {
+                    Name = random.RandomString(5, 15),
+                    Description = random.RandomString(10, 30),
+                    StartDate = startDate,
+                    EndDate = endDate,
+                    Status = (ProjectStatusType)random.RandomNumber(1, 7)
+                };
+
+                testedSystem.Projects.Add(project);
+            }
         }
 
-        private void SeadSystemEnvironments(TestedSystem system)
+        private void SeadSystemEnvironments(TestedSystem testedSystem)
         {
             var environmentsCount = random.RandomNumber(1,3);
             for(var i=0; i< environmentsCount; i++)
@@ -110,7 +132,7 @@ namespace TestManagmentSystem.Data.Migrations
                     Url = random.RandomString(10, 20)
                 };
 
-                system.Environments.Add(systemEnvironment);
+                testedSystem.Environments.Add(systemEnvironment);
             }
         }
     }
