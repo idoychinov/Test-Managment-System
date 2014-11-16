@@ -53,6 +53,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Issue.cs" />
+    <Compile Include="IssueStatusType.cs" />
     <Compile Include="User.cs" />
     <Compile Include="EnvironmentType.cs" />
     <Compile Include="ProjectStatusType.cs" />
