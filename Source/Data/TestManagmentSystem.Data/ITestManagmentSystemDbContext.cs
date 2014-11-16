@@ -8,7 +8,7 @@
 
     public interface ITestManagmentSystemDbContext
     {
-        IDbSet<ApplicationUser> Users { get; set; }
+        IDbSet<User> Users { get; set; }
 
         IDbSet<TestedSystem> TestedSystems { get; set; }
 

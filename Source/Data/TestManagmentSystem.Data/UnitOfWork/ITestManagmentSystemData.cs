@@ -13,6 +13,6 @@
 
         IDeletableEntityRepository<Project> Projects { get; }
 
-        IRepository<ApplicationUser> Users { get; }
+        IRepository<User> Users { get; }
     }
 }

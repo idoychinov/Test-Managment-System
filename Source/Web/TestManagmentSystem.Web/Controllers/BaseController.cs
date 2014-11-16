@@ -14,6 +14,6 @@
 
         protected ITestManagmentSystemData Data { get; set; }
 
-        protected ApplicationUser CurrentUser { get; set; }
+        protected User CurrentUser { get; set; }
     }
 }

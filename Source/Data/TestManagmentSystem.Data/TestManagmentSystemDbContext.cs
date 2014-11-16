@@ -10,7 +10,7 @@ using TestManagmentSystem.Data.Models;
 
 namespace TestManagmentSystem.Data
 {
-    public class TestManagmentSystemDbContext : IdentityDbContext<ApplicationUser>, ITestManagmentSystemDbContext
+    public class TestManagmentSystemDbContext : IdentityDbContext<User>, ITestManagmentSystemDbContext
     {
         public TestManagmentSystemDbContext()
             : this("DefaultConnection")

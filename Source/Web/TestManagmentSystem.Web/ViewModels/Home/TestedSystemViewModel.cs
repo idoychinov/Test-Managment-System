@@ -4,8 +4,6 @@
     using System.Collections.Generic;
     using System.Linq;
     using AutoMapper;
-    using AutoMapper.QueryableExtensions;
-
 
     using TestManagmentSystem.Data.Models;
     using TestManagmentSystem.Web.Infrastructure.Mapping;

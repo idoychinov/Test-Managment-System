@@ -11,9 +11,9 @@
         {
         }
 
-        public IRepository<ApplicationUser> Users
+        public IRepository<User> Users
         {
-            get { return this.GetRepository<ApplicationUser>(); }
+            get { return this.GetRepository<User>(); }
         }
 
         public IDeletableEntityRepository<TestedSystem> TestedSystems
