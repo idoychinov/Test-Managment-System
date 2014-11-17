@@ -17,7 +17,8 @@
             context.MapRoute(
                 "Administration_default",
                 "Administration/{controller}/{action}/{id}",
-                new {controler= "TestedSystems", action = "Index", id = UrlParameter.Optional }
+                new {controler= "TestedSystems", action = "Index", id = UrlParameter.Optional },
+                new string[] { "TestManagmentSystem.Web.Areas.Administration.Controllers" }
             );
         }
     }

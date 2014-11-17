@@ -8,9 +8,9 @@
     using TestManagmentSystem.Data.UnitOfWork;
     using TestManagmentSystem.Web.Areas.Administration.Controllers.Base;
 
-    public class TestedSystemsControler : AdminController
+    public class TestedSystemsController : AdminController
     {
-        public TestedSystemsControler(ITestManagmentSystemData data)
+        public TestedSystemsController(ITestManagmentSystemData data)
             :base(data)
         {
         }

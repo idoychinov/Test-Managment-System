@@ -216,7 +216,7 @@
       <SubType>Designer</SubType>
     </None>
     <Compile Include="Areas\Administration\Controllers\Base\AdminController.cs" />
-    <Compile Include="Areas\Administration\Controllers\TestedSystemsControler.cs" />
+    <Compile Include="Areas\Administration\Controllers\TestedSystemsController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />

@@ -28,7 +28,7 @@ namespace TestManagmentSystem.Web
             bundles.Add(new StyleBundle("~/Content/kendo").Include(
                         "~/Content/kendo/kendo.common.min.css",
                         "~/Content/kendo/kendo.common-bootstrap.min.css",
-                        "~/Content/kendo/kendo.bootstrap.min.css"));
+                        "~/Content/kendo/kendo.black.min.css"));
 
             // Aways include custom site stiles last in the layout
             bundles.Add(new StyleBundle("~/Content/custom").Include(

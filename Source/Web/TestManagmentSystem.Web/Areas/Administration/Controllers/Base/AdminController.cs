@@ -5,7 +5,7 @@
     using TestManagmentSystem.Data.UnitOfWork;
     using TestManagmentSystem.Web.Controllers;
 
-    [Authorize(Roles = GlobalConstants.AdminRole)]
+    //[Authorize(Roles = GlobalConstants.AdminRole)]
     public abstract class AdminController : BaseController
     {
         public AdminController(ITestManagmentSystemData data)
