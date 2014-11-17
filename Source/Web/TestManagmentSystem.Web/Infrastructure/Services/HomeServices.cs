@@ -21,12 +21,13 @@
         public IList<TestedSystemViewModel> GetIndexViewModel(int numberOfSystems)
         {
             var indexViewModel = this.Data.
-                TestedSystems.
-                All()
-                .OrderBy(t => t.Name)
-                .Take(numberOfSystems)
+                TestedSystems
+                .All()
                 .Project()
                 .To<TestedSystemViewModel>()
+                .OrderByDescending(t => t.IssuesCount)
+                .ThenByDescending(t => t.EnvorinmentsCount)
+                .Take(numberOfSystems)
                 .ToList();
 
             return indexViewModel;

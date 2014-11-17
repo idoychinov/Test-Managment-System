@@ -221,6 +221,7 @@
     <Compile Include="Infrastructure\Services\Contracts\IHomeServices.cs" />
     <Compile Include="Infrastructure\Services\HomeServices.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />
+    <Compile Include="ViewModels\Home\IssuesViewModel.cs" />
     <Compile Include="ViewModels\Home\SystemEnvironmentViewModel.cs" />
     <Compile Include="ViewModels\Home\TestedSystemViewModel.cs" />
     <Compile Include="ViewModels\ManageViewModels.cs" />
@@ -272,8 +273,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
@@ -299,11 +298,15 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\_TestedSystemsPartial.cshtml" />
+    <Content Include="Views\Home\_LatestIssuesPartial.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\TestedSystemViewModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SystemEnvironmentViewModel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Libraries\" />
     <Folder Include="Views\Base\" />
+    <Folder Include="Views\Shared\Editor Templates\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

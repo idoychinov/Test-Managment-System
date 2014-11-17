@@ -24,24 +24,11 @@ namespace TestManagmentSystem.Web.Controllers
             return View();
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
-
         [ChildActionOnly]
-        [OutputCache(Duration = 60 * 60)]
+        [OutputCache(Duration = 5 * 1)]
         public ActionResult TestedSystems()
         {
-            return PartialView("_TestedSystemsPartial", this.homeServices.GetIndexViewModel(5));
+            return PartialView("_TestedSystemsPartial", this.homeServices.GetIndexViewModel(3));
         }
     }
 }

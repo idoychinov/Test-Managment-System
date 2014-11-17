@@ -219,6 +219,7 @@ namespace TestManagmentSystem.Data.Migrations
             GeneratedTestedSystem(context, "Test Management System", "The product allows management of system and integration and UAT tests results");
             GeneratedTestedSystem(context, "Pew Pew", "Very addictive online game. The title says it all");
             GeneratedTestedSystem(context, "Our Intra-net", "The Company's intra-net site");
+            GeneratedTestedSystem(context, "Some other system", "Just Testing");
 
             context.SaveChanges();
         }

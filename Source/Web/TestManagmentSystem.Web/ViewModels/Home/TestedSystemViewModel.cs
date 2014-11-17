@@ -14,14 +14,21 @@
 
         public string Name { get; set; }
 
-        public string Description { get; set; }
+        public int EnvorinmentsCount { get; set; }
 
-        public IList<SystemEnvironmentViewModel> Envoriments { get; set; }
+        public int IssuesCount { get; set; }
+
+        //public IList<SystemEnvironmentViewModel> Envoriments { get; set; }
 
         public void CreateMappings(IConfiguration configuration)
         {
+            //configuration.CreateMap<TestedSystem, TestedSystemViewModel>()
+            //    .ForMember(m => m.Envoriments, opt => opt.MapFrom(t => t.Environments.Select(e => new SystemEnvironmentViewModel() { Id = e.Id, Name = e.Name, Type = e.Type})))
+            //    .ReverseMap();
+
             configuration.CreateMap<TestedSystem, TestedSystemViewModel>()
-                .ForMember(m => m.Envoriments, opt => opt.MapFrom(t => t.Environments.Select(e => new SystemEnvironmentViewModel() { Id = e.Id, Name = e.Name, Type = e.Type})))
+                .ForMember(m => m.EnvorinmentsCount, opt => opt.MapFrom(t => t.Environments.Count()))
+                .ForMember(m => m.IssuesCount, opt => opt.MapFrom(t => t.Environments.Sum(e=> e.Issues.Count)))
                 .ReverseMap();
         }
     }
