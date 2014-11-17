@@ -41,15 +41,15 @@
         public string UserId { get; set; }
         public virtual User User { get; set; }
 
-        public int ProjectId { get; set; }
+        public int? ProjectId { get; set; }
 
         public virtual Project Project { get; set; }
 
-        public int TestCaseId { get; set; }
+        public int? TestCaseId { get; set; }
 
         public virtual TestCase TestCase { get; set; }
 
-        public int SystemEnvironmentId { get; set; }
+        public int? SystemEnvironmentId { get; set; }
 
         public virtual SystemEnvironment SystemEnvironment { get; set; }
 

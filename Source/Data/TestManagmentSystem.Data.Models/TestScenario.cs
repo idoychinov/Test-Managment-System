@@ -29,11 +29,11 @@
         [DefaultValue(TestScenarioType.RegressionTest)]
         public TestScenarioType Type { get; set; }
 
-        public int ProjectId { get; set; }
+        public int? ProjectId { get; set; }
 
         public virtual Project Project {get; set;}
 
-        public int SystemEnvironmentId { get; set; }
+        public int? SystemEnvironmentId { get; set; }
 
         public virtual SystemEnvironment SystemEnvironment { get; set; }
 

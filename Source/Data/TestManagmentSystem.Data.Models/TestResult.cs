@@ -1,6 +1,7 @@
 ﻿namespace TestManagmentSystem.Data.Models
 {
     
+    using System;
     using System.Collections.Generic;
     using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
@@ -20,7 +21,7 @@
         public TestResultStatusType TestStatus {get; set;}
 
         [Required]
-        public DataType Date {get; set;}
+        public DateTime Date {get; set;}
 
         public string UserId { get; set; }
 
