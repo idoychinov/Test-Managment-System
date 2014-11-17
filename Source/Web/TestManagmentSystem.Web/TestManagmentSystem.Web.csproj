@@ -216,7 +216,9 @@
       <SubType>Designer</SubType>
     </None>
     <Compile Include="Areas\Administration\Controllers\Base\AdminController.cs" />
+    <Compile Include="Areas\Administration\Controllers\Base\KendoGridAdministrationController.cs" />
     <Compile Include="Areas\Administration\Controllers\TestedSystemsController.cs" />
+    <Compile Include="Areas\Administration\ViewModels\TestedSystems\TestedSystemViewModel.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -236,6 +238,7 @@
     <Compile Include="ViewModels\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Content Include="Views\Shared\Editor Templates\MultiLineText.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -315,11 +318,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Administration\Infrastructure\Services\" />
-    <Folder Include="Areas\Administration\ViewModels\" />
     <Folder Include="Areas\Tests\" />
     <Folder Include="Libraries\" />
     <Folder Include="Views\Base\" />
-    <Folder Include="Views\Shared\Editor Templates\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

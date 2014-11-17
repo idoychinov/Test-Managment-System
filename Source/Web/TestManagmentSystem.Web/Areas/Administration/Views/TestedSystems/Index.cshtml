@@ -1,1 +1,9 @@
 ﻿<h2>Tested Systems Administration</h2>
+﻿@using TestManagmentSystem.Web.Areas.Administration.ViewModels.TestedSystems;
+@{
+    const string ControllerName = "TestedSystems";
+    ViewBag.Title = ControllerName;
+}
+
+<h2>@ViewBag.Title</h2>
+@(Html.FullFeaturedGrid<TestedSystemViewModel>(ControllerName, m => m.Id))
