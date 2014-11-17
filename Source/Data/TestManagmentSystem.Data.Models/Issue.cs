@@ -30,7 +30,7 @@
         public string Description { get; set; }
 
         [Required]
-        public DateTime DateSubmited { get; set; }
+        public DateTime DateSubmitted { get; set; }
 
         [DefaultValue(IssueStatusType.New)]
         public IssueStatusType Status { get; set; }

@@ -18,9 +18,9 @@
         {
         }
 
-        public IList<TestedSystemViewModel> GetIndexViewModel(int numberOfSystems)
+        public IList<TestedSystemViewModel> GetIndexTestdSystemsViewModel(int numberOfSystems)
         {
-            var indexViewModel = this.Data.
+            var testedSystemsViewModel = this.Data.
                 TestedSystems
                 .All()
                 .Project()
@@ -30,7 +30,22 @@
                 .Take(numberOfSystems)
                 .ToList();
 
-            return indexViewModel;
+            return testedSystemsViewModel;
+        }
+
+        public IList<IssuesViewModel> GetIndexIssuesViewModel(int numberOfIssues)
+        {
+            var issuesViewModel = this.Data.
+                Issues
+                .All()
+                .Project()
+                .To<IssuesViewModel>()
+                .OrderByDescending(t => t.DateSubmitted)
+                .ThenByDescending(t => t.Priority)
+                .Take(numberOfIssues)
+                .ToList();
+
+            return issuesViewModel;
         }
     }
 }

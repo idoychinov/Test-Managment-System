@@ -1,0 +1,27 @@
+﻿@model TestManagmentSystem.Web.ViewModels.Home.IssuesViewModel
+
+<div class="col-lg-4">
+    <div class="panel panel-primary">
+        <div class="panel-heading">@Model.Name</div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-6">Found In</div>
+                <div class="col-md-6" style="word-wrap: break-word">@Model.FoundIn</div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">Date Submitted</div>
+                <div class="col-md-6">@Model.DateSubmitted</div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">Priority</div>
+                <div class="col-md-6">@Model.Priority</div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">Status</div>
+                <div class="col-md-6">@Model.Status</div>
+            </div>
+        </div>
+    </div>
+</div>

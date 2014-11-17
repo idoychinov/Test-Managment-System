@@ -5,6 +5,9 @@
 
     public interface IHomeServices
     {
-        IList<TestedSystemViewModel> GetIndexViewModel(int numberOfSystems);
+        IList<TestedSystemViewModel> GetIndexTestdSystemsViewModel(int numberOfSystems);
+
+        IList<IssuesViewModel> GetIndexIssuesViewModel(int numberOfIssues);
+
     }
 }

@@ -53,7 +53,7 @@ namespace TestManagmentSystem.Data.Migrations
                 {
                     Name = random.RandomString(5, 15),
                     Description = random.RandomString(10, 30),
-                    DateSubmited = new DateTime(random.RandomNumber(2010, 2015), random.RandomNumber(1, 12), random.RandomNumber(1, 28)),
+                    DateSubmitted = new DateTime(random.RandomNumber(2010, 2015), random.RandomNumber(1, 12), random.RandomNumber(1, 28)),
                     Status = (IssueStatusType)random.RandomNumber(1, 5),
                     Priority = (IssuePriorityType)random.RandomNumber(1, 4),
                     User = users[random.RandomNumber(0, users.Count - 1)],

@@ -1,20 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using TestManagmentSystem.Data;
-using TestManagmentSystem.Data.UnitOfWork;
-using TestManagmentSystem.Web.Infrastructure.Services.Contracts;
-
-namespace TestManagmentSystem.Web.Controllers
+﻿namespace TestManagmentSystem.Web.Controllers
 {
+    using System;
+    using System.Web.Mvc;
+    using TestManagmentSystem.Data.UnitOfWork;
+    using TestManagmentSystem.Web.Infrastructure.Services.Contracts;
+
     public class HomeController : BaseController
     {
+        private const int NumberOfSystems = 3;
+        private const int NumberOfIssues = 3;
         private IHomeServices homeServices;
 
         public HomeController(ITestManagmentSystemData data, IHomeServices services)
-            :base(data)
+            : base(data)
         {
             this.homeServices = services;
         }
@@ -28,7 +26,14 @@ namespace TestManagmentSystem.Web.Controllers
         [OutputCache(Duration = 5 * 1)]
         public ActionResult TestedSystems()
         {
-            return PartialView("_TestedSystemsPartial", this.homeServices.GetIndexViewModel(3));
+            return PartialView("_TestedSystemsPartial", this.homeServices.GetIndexTestdSystemsViewModel(NumberOfSystems));
+        }
+
+        [ChildActionOnly]
+        [OutputCache(Duration = 5 * 1)]
+        public ActionResult Issues()
+        {
+            return PartialView("_LatestIssuesPartial", this.homeServices.GetIndexIssuesViewModel(NumberOfIssues));
         }
     }
 }

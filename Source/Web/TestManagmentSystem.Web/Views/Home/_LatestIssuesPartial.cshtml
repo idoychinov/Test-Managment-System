@@ -1,9 +1,20 @@
 ﻿@model IList<TestManagmentSystem.Web.ViewModels.Home.IssuesViewModel>
 
 <h2>Latest Issues: </h2>
-@for (int i = 0; i < Model.Count; i++)
+@{ var issuesRows = Model.Count / 3 == 0 ? Model.Count : Model.Count / 3;}
+@for (int i = 0; i < issuesRows; i++)
 {
-    @Html.DisplayFor(m => m[i])
+    <div class="row">
+        @for (int j = 0; j < 3; j++)
+        {
+            var currentIssue = 3 * i + j;
+            if (currentIssue == Model.Count)
+            {
+                break;
+            }
+            @Html.DisplayFor(m => m[currentIssue])
+        }
+    </div>
 }
 
 
