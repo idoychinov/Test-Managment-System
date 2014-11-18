@@ -2,9 +2,36 @@
 
 <div class="panel panel-primary">
     <div class="panel-heading">
-        @Model.Name
+        <div class="row">
+            <div class="col-md-4">@Model.Name</div>
+            <div class="col-md-2 pull-right">Total Issues: <span class="alert-danger">@Model.IssuesCount</span></div>
+        </div>
     </div>
     <div class="panel-body">
+        <div class="row">
+            <div class="col-md-2">Description:</div>
+            <div class="col-md-10">@Model.Description</div>
+        </div>
 
+        <div class="lead">Environments:</div>
+         @foreach(var envorinment in Model.Environments)
+         {
+            <div class="row">
+                <div class="col-md-4">Name: @envorinment.Name</div>
+                <div class="col-md-4">Type: @envorinment.Name</div>
+                <div class="col-md-4">Number of Issues: @envorinment.Issues</div>
+            </div>
+         }
+
+        <div class="lead">Projects:</div>
+        @foreach (var project in Model.Projects)
+        {
+            <div class="row">
+                <div class="col-md-4">Name: @project.Name</div>
+                <div class="col-md-4">Status: @project.Status</div>
+                <div class="col-md-4">Number of Issues: @project.Issues</div>
+            </div>
+        }
+        
     </div>
 </div>

@@ -246,6 +246,9 @@
     <Content Include="Views\Shared\Editor Templates\MultiLineText.cshtml" />
     <Content Include="Views\Systems\Index.cshtml" />
     <Content Include="Views\Systems\_TestedSystemsPartial.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\ProjectsViewModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SystemEnvironmentViewModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SystemsViewModel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />

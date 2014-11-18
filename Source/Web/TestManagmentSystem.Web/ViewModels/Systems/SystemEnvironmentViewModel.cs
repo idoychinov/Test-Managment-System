@@ -2,12 +2,11 @@
 {
     
     using System;
+    using System.ComponentModel.DataAnnotations;
     using System.Linq;
     using AutoMapper;
-
     using TestManagmentSystem.Data.Models;
     using TestManagmentSystem.Web.Infrastructure.Mapping;
-
 
     public class SystemEnvironmentViewModel : IMapFrom<SystemEnvironment>
     {

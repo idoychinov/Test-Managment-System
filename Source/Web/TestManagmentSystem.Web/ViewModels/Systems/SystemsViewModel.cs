@@ -19,10 +19,9 @@ namespace TestManagmentSystem.Web.ViewModels.Systems
 
         public int? IssuesCount { get; set; }
 
-        [UIHint("EnvorinmentsInSystemViewModel")]
         public IList<SystemEnvironmentViewModel> Environments { get; set; }
 
-        [UIHint("ProjectsInSystemViewModel")]
+        [UIHint("ProjectsViewModel")]
         public IList<ProjectsViewModel> Projects { get; set; }
 
 
