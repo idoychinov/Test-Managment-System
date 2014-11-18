@@ -9,7 +9,7 @@
     {
         private const int NumberOfSystems = 3;
         private const int NumberOfIssues = 3;
-        private IHomeServices homeServices;
+        private readonly IHomeServices homeServices;
 
         public HomeController(ITestManagmentSystemData data, IHomeServices services)
             : base(data)

@@ -27,8 +27,8 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav" id="menu">
                     <li>@Html.ActionLink("Home", "Index", "Home", new { area = string.Empty }, null)</li>
-                    <li>@Html.ActionLink("Systems", "Display", "Systems", new { area = string.Empty }, null)</li>
-                    <li>@Html.ActionLink("Issues", "Display", "Issues", new { area = string.Empty }, null)</li>
+                    <li>@Html.ActionLink("Systems", "Index", "Systems", new { area = string.Empty }, null)</li>
+                    <li>@Html.ActionLink("Issues", "Index", "Issues", new { area = string.Empty }, null)</li>
                     @if (User.Identity.IsAuthenticated)
                     {
                         <li>@Html.ActionLink("Tests", "Index", "Tests", new { area = string.Empty }, null)</li>
@@ -39,7 +39,7 @@
                                 <ul>
                                     <li>@Html.ActionLink("Systems", "Index", "TestedSystems", new { area = "Administration" }, null)</li>
                                     <li>@Html.ActionLink("Projects", "Index", "Projects", new { area = "Administration" }, null)</li>
-                                    <li>@Html.ActionLink("Categories", "Index", "Issues", new { area = "Administration" }, null)</li>
+                                    <li>@Html.ActionLink("Environments", "Index", "Environments", new { area = "Administration" }, null)</li>
                                 </ul>
                             </li>
                         }

@@ -1,6 +1,6 @@
-﻿namespace TestManagmentSystem.Web.ViewModels.Home
+﻿namespace TestManagmentSystem.Web.ViewModels.Systems
 {
-    
+        
     using System;
     using System.Linq;
     using AutoMapper;
@@ -9,12 +9,14 @@
     using TestManagmentSystem.Web.Infrastructure.Mapping;
 
 
-    public class SystemEnvironmentViewModel : IMapFrom<SystemEnvironment>
+    public class ProjectsViewModel : IMapFrom<Project>
     {
         public int Id { get; set; }
 
         public string Name { get; set; }
 
-        public EnvironmentType Type { get; set; }
+        public ProjectStatusType Status { get; set; }
+
+        public int? Issues { get; set; }
     }
 }

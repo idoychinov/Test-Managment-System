@@ -71,6 +71,8 @@ namespace TestManagmentSystem.Web.App_Start
             kernel.Bind<ISanitizer>().To<HtmlSanitizerAdapter>();
 
             kernel.Bind<IHomeServices>().To<HomeServices>();
+            kernel.Bind<ISystemsServices>().To<SystemsServices>();
+
         }        
     }
 }
