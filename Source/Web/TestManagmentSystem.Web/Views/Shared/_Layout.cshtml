@@ -31,22 +31,29 @@
                     <li>@Html.ActionLink("Issues", "Index", "Issues", new { area = string.Empty }, null)</li>
                     @if (User.Identity.IsAuthenticated)
                     {
-                        <li>@Html.ActionLink("Tests", "Index", "Tests", new { area = string.Empty }, null)</li>
+                        <li>
+                            Tests Management
+                            <ul>
+                                <li>@Html.ActionLink("Test Scenarios", "Index", "TestScenarios", new { area = "Tests" }, null)</li>
+                                @*<li>@Html.ActionLink("Issues", "Index", "Issues", new { area = "Tests" }, null)</li>*@
+                            </ul>
+                        </li>
                         if (User.IsInRole(GlobalConstants.AdminRole))
                         {
                             <li>
                                 Administration
                                 <ul>
                                     <li>@Html.ActionLink("Systems", "Index", "TestedSystems", new { area = "Administration" }, null)</li>
-                                    <li>@Html.ActionLink("Projects", "Index", "Projects", new { area = "Administration" }, null)</li>
-                                    <li>@Html.ActionLink("Environments", "Index", "Environments", new { area = "Administration" }, null)</li>
+                                    @*@<li>@Html.ActionLink("Projects", "Index", "Projects", new { area = "Administration" }, null)</li>
+                                    <li>@Html.ActionLink("Environments", "Index", "Environments", new { area = "Administration" }, null)</li>*@
                                 </ul>
                             </li>
                         }
                     }
                 </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
+
+                            @Html.Partial("_LoginPartial")
+</div>
         </div>
     </div>
     <div class="container body-content">

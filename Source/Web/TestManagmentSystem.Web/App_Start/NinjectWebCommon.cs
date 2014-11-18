@@ -12,6 +12,8 @@ namespace TestManagmentSystem.Web.App_Start
     using Ninject.Web.Common;
     using TestManagmentSystem.Data;
     using TestManagmentSystem.Data.UnitOfWork;
+    using TestManagmentSystem.Web.Areas.Tests.Infrastructure.Services;
+    using TestManagmentSystem.Web.Areas.Tests.Infrastructure.Services.Contracts;
     using TestManagmentSystem.Web.Infrastructure;
     using TestManagmentSystem.Web.Infrastructure.Services;
     using TestManagmentSystem.Web.Infrastructure.Services.Contracts;
@@ -73,8 +75,7 @@ namespace TestManagmentSystem.Web.App_Start
             kernel.Bind<IHomeServices>().To<HomeServices>();
             kernel.Bind<ISystemsServices>().To<SystemsServices>();
             kernel.Bind<IIssuesServices>().To<IssuesServices>();
-
-
+            kernel.Bind<ITestScenarioServices>().To<TestScenarioServices>();
         }        
     }
 }

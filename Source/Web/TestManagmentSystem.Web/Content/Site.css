@@ -26,3 +26,12 @@ textarea {
 .editor-field {
     color :black;
 }
+
+.break-word{
+    word-wrap: break-word;
+}
+
+.table-heading {
+    font-weight:bold;
+    font-size: 1.4em;
+}

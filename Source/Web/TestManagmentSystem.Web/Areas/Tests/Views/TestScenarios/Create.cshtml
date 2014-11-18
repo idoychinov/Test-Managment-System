@@ -1,0 +1,12 @@
+﻿@using TestManagmentSystem.Web.Areas.Tests.InputModels;
+@using TestManagmentSystem.Web.Infrastructure.Helpers;
+
+@model TestScenarioInputModel
+
+@using (Html.BeginForm("Create", "TestScenarios", FormMethod.Post, new { @class = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.EditorForModel()
+
+    @Html.Submit()
+}

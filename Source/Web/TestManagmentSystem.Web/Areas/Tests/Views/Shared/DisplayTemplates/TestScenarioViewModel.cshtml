@@ -1,0 +1,14 @@
+﻿@using TestManagmentSystem.Web.Areas.Tests.ViewModels;
+
+@model TestScenarioViewModel
+
+<div class="row break-word">
+    <div class="col-md-2">@Model.Name</div>
+    <div class="col-md-2">@Model.Description</div>
+    <div class="col-md-2">@Model.Type</div>
+    <div class="col-md-2">@Model.System</div>
+    <div class="col-md-2">@Model.Project</div>
+    <div class="col-md-2">@Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { @class = "btn btn-primary  pull-right" })</div>
+</div>
+<br />
+

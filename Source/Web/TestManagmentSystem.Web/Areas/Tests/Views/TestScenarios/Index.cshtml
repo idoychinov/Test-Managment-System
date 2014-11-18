@@ -1,0 +1,16 @@
+﻿@model int?
+@{
+    ViewBag.Title = "Test Scenarios Page";
+}
+
+<h2 class="text-center">Test Systems</h2>
+<br />
+@if (TempData["NotificationMessage"] != null)
+{
+    <div class="alert-success">@TempData["NotificationMessage"]</div>
+    <br />
+}
+@Html.Action("AllScenarios", new { page = Model })
+<br />
+@Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-large btn-primary pull-right" })
+<br />

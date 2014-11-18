@@ -210,6 +210,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Administration\AdministrationAreaRegistration.cs" />
+    <Compile Include="Areas\Tests\Infrastructure\Services\Contracts\ITestScenarioServices.cs" />
+    <Compile Include="Areas\Tests\Controllers\IssuesController.cs" />
+    <Compile Include="Areas\Tests\Controllers\TestScenariosController.cs" />
+    <Compile Include="Areas\Tests\Infrastructure\Services\TestScenarioServices.cs" />
+    <Compile Include="Areas\Tests\InputModels\TestScenarioInputModel.cs" />
+    <Compile Include="Areas\Tests\TestsAreaRegistration.cs" />
+    <Compile Include="Areas\Tests\ViewModels\TestCaseViewModel.cs" />
+    <Compile Include="Areas\Tests\ViewModels\TestScenarioViewModel.cs" />
     <Compile Include="Controllers\IssuesController.cs" />
     <Compile Include="Infrastructure\Services\Contracts\IIssuesServices.cs" />
     <Compile Include="Infrastructure\Services\IssuesServices.cs" />
@@ -278,6 +286,14 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Areas\Administration\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Tests\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Tests\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Tests\Views\web.config" />
+    <Content Include="Areas\Tests\Views\TestScenarios\_TestScenariosPartial.cshtml" />
+    <Content Include="Areas\Tests\Views\TestScenarios\Index.cshtml" />
+    <Content Include="Areas\Tests\Views\TestScenarios\Create.cshtml" />
+    <Content Include="Areas\Tests\Views\Shared\DisplayTemplates\TestScenarioViewModel.cshtml" />
+    <Content Include="Areas\Tests\Views\TestScenarios\Edit.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
@@ -338,8 +354,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Administration\Infrastructure\Services\" />
-    <Folder Include="Areas\Tests\" />
+    <Folder Include="Areas\Administration\Infrastructure\" />
+    <Folder Include="Areas\Tests\Views\Issues\" />
+    <Folder Include="Areas\Tests\Views\Shared\EditorTemplates\" />
     <Folder Include="Libraries\" />
     <Folder Include="Views\Base\" />
   </ItemGroup>
