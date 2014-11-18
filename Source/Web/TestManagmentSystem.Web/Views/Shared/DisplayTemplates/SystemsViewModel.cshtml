@@ -12,6 +12,7 @@
             <div class="col-md-2">Description:</div>
             <div class="col-md-10">@Model.Description</div>
         </div>
+        <br />
 
         <div class="lead">Environments:</div>
          @foreach(var envorinment in Model.Environments)
@@ -22,7 +23,7 @@
                 <div class="col-md-4">Number of Issues: @envorinment.Issues</div>
             </div>
          }
-
+        <br/>
         <div class="lead">Projects:</div>
         @foreach (var project in Model.Projects)
         {
@@ -32,6 +33,5 @@
                 <div class="col-md-4">Number of Issues: @project.Issues</div>
             </div>
         }
-        
     </div>
 </div>
