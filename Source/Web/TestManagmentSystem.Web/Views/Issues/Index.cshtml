@@ -1,0 +1,37 @@
+﻿@model int?
+@{
+    ViewBag.Title = "Issues Page";
+}
+
+<h2 class="text-center">Active issues</h2>
+<br />
+@using (Ajax.BeginForm("ActiveIssues", null,
+    new AjaxOptions
+    {
+        UpdateTargetId = "results",
+        InsertionMode = InsertionMode.Replace,
+        HttpMethod = "POST"
+    }, new { id = "searchForm" }))
+{
+    <div class="row">
+        <div class="pull-right">
+            Search
+            <input type="text" name="searchPattern" oninput="changed()" />
+        </div>
+    </div>
+}
+<br />
+
+
+<div id="results">
+    @Html.Action("ActiveIssues", new { page = Model, searchPattern = "" })
+</div>
+
+
+@section Scripts {
+    <script>
+        function changed() {
+            $("#searchForm").submit();
+        }
+    </script>
+}

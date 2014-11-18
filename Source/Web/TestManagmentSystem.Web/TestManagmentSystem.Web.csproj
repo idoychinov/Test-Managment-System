@@ -210,6 +210,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Administration\AdministrationAreaRegistration.cs" />
+    <Compile Include="Controllers\IssuesController.cs" />
+    <Compile Include="Infrastructure\Services\Contracts\IIssuesServices.cs" />
+    <Compile Include="Infrastructure\Services\IssuesServices.cs" />
+    <Compile Include="ViewModels\Issues\IssueViewModel.cs" />
     <Compile Include="ViewModels\PagingViewModel.cs" />
     <Compile Include="ViewModels\Systems\ProjectsViewModel.cs" />
     <Compile Include="ViewModels\Systems\SystemsViewModel.cs" />
@@ -244,6 +248,8 @@
     <Compile Include="ViewModels\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Views\Shared\Editor Templates\MultiLineText.cshtml" />
     <Content Include="Views\Systems\Index.cshtml" />
     <Content Include="Views\Systems\_TestedSystemsPartial.cshtml" />
@@ -251,6 +257,9 @@
     <Content Include="Views\Shared\DisplayTemplates\SystemEnvironmentViewModel.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\SystemsViewModel.cshtml" />
     <Content Include="Views\Shared\_PagingPartial.cshtml" />
+    <Content Include="Views\Issues\_ActiveIssuesPartial.cshtml" />
+    <Content Include="Views\Issues\Index.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\IssueViewModel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />

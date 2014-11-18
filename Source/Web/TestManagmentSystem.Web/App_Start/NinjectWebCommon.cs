@@ -72,6 +72,8 @@ namespace TestManagmentSystem.Web.App_Start
 
             kernel.Bind<IHomeServices>().To<HomeServices>();
             kernel.Bind<ISystemsServices>().To<SystemsServices>();
+            kernel.Bind<IIssuesServices>().To<IssuesServices>();
+
 
         }        
     }

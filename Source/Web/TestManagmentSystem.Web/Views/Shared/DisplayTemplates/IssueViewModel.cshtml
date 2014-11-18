@@ -1,0 +1,35 @@
+﻿@model TestManagmentSystem.Web.ViewModels.Issues.IssueViewModel
+
+<div class="row">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-md-4">@Model.Name</div>
+                <div class="col-md-3 pull-right">Priority: @Model.Priority</div>
+                <div class="col-md-3 pull-right">Status: @Model.Status</div>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-4">Date Submitted</div>
+                <div class="col-md-8">@Model.DateSubmitted</div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">System</div>
+                <div class="col-md-8">@Model.System</div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">Environment</div>
+                <div class="col-md-8">@Model.Environment</div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">Project:</div>
+                <div class="col-md-8">@(Model.Project??"none")</div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">Submitted By:</div>
+                <div class="col-md-8">@Model.User</div>
+            </div>
+        </div>
+    </div>
+</div>
